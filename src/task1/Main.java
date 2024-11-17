@@ -17,16 +17,19 @@ public class Main {
         System.out.println(books);
 
         // todo create a Comparator for title and use it here in a Collections.sort before the printout
-
+        Collections.sort(books, new TitleComparator());
         System.out.println(books);
 
         // todo create a Comparator for author and use it here in a Collections.sort before the printout
-
+        Collections.sort(books, new AuthorComparator());
         System.out.println(books);
 
         // todo create a Comparator for price and use it here in a Collections.sort before the printout
-
+        Collections.sort(books, new PriceComparator());
         System.out.println(books);
+
+
+
 
     }
 }

@@ -18,16 +18,30 @@ public class Main {
         System.out.println(books);
 
         // todo use an anonymous Comparator class here for title and use it here in a Collections.sort before the printout
-
+        Collections.sort(books, new Comparator<Book>() {
+            @Override
+            public int compare(Book o1, Book o2) {
+                return o1.getTitle().compareTo(o2.getTitle());
+            }
+        });
         System.out.println(books);
 
         // todo use an anonymous Comparator class here for author and use it here in a Collections.sort before the printout
-
-
+        Collections.sort(books, new Comparator<Book>() {
+            @Override
+            public int compare(Book o1, Book o2) {
+                return o2.getAuthor().compareTo(o1.getAuthor());
+            }
+        });
         System.out.println(books);
 
         // todo use an anonymous Comparator class here for price and use it here in a Collections.sort before the printout
-
+        Collections.sort(books, new Comparator<Book>() {
+            @Override
+            public int compare(Book o1, Book o2) {
+                return o2.getPrice() - o1.getPrice();
+            }
+        });
 
         System.out.println(books);
 

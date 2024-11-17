@@ -4,6 +4,7 @@ import task1.Book;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class Main {
@@ -19,15 +20,15 @@ public class Main {
         System.out.println(books);
 
         // todo use a labmda expression here to implement a Comparator interface for title and use it in a Collections.sort before the printout
-
+        Collections.sort(books, Comparator.comparing(book -> book.getTitle()));
         System.out.println(books);
 
         // todo use a labmda expression here to implement a Comparator interface for author and use it in a Collections.sort before the printout
-
+        Collections.sort(books, Comparator.comparing(book -> book.getAuthor()));
         System.out.println(books);
 
         // todo use a labmda expression here to implement a Comparator interface for price and use it in a Collections.sort before the printout
-
+        Collections.sort(books, Comparator.comparing(book ->book.getPrice()));
         System.out.println(books);
 
     }
